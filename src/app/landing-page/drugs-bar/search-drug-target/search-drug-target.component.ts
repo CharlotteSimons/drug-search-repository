@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, Subject, of } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap, catchError } from 'rxjs/operators';
 import { DrugsService } from '../../../services/drug.service';
+import { SearchInputService } from '../../../services/search-input.service';
 
 export interface DrugTarget {
   target_name: string;
@@ -15,7 +16,6 @@ export interface DrugTarget {
     '../../../shared/styles/shared-styles.css' 
   ]
 })
-
 export class SearchDrugTargetComponent implements OnInit {
   targets$!: Observable<DrugTarget[]>; 
   filteredTargets$!: Observable<DrugTarget[]>;
@@ -25,7 +25,10 @@ export class SearchDrugTargetComponent implements OnInit {
   showSidePanelDrugs: boolean = false;
   private searchTerms = new Subject<string>();
 
-  constructor(private drugsService: DrugsService) {}
+  constructor(
+    private drugsService: DrugsService,
+    private searchInputService: SearchInputService // Injecteer de service
+  ) {}
 
   ngOnInit() {
     this.targets$ = this.drugsService.getDrugTargets();
@@ -46,6 +49,7 @@ export class SearchDrugTargetComponent implements OnInit {
     this.searchInput = target.value;
     this.searchTerms.next(target.value);
     this.showSuggestions = !!target.value;
+    this.searchInputService.changeDrugTargetTerm(target.value); // Update de zoekterm in de service
   }
 
   fetchSuggestions(query: string): Observable<DrugTarget[]> {
@@ -67,6 +71,7 @@ export class SearchDrugTargetComponent implements OnInit {
   handleSelect(target: DrugTarget): void {
     this.searchInput = target.target_name;
     this.showSuggestions = false;
+    this.searchInputService.changeDrugTargetTerm(target.target_name); // Update de zoekterm in de service
   }
 
   handleInfoClick(): void {

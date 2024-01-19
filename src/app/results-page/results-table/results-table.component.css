@@ -38,6 +38,8 @@ h1 {
   font-weight: normal; /* Zorgt ervoor dat de h1 tekst niet dikgedrukt is */
 }
 
-.results-count {
-  font-weight: bold; /* Maakt de tekst binnen de span dikgedrukt */
+h1 .results-count,
+h1 .search-term,
+h1 .drug-target-term {
+  font-weight: bold;
 }
