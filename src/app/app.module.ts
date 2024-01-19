@@ -66,7 +66,7 @@ import { BackToTopComponent } from './drug-page/back-to-top/back-to-top.componen
     IndicationComponent,
     ExtraSafetyComponent,
     PharmacokineticsComponent,
-    MahComponent,
+    MahComponent, 
     InfoButtonDrugTargetComponent,
     SidePanelDrugTargetComponent,
     SidePanelMedicalConditionComponent,

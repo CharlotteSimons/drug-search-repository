@@ -23,20 +23,11 @@
 }
 
 button {
-    margin: 0;
-    background-color: #00a56a;
-    color: black; /* Verandert de tekstkleur naar wit voor beter contrast */
-    border: none;
-    border-radius: 5px 5px 0 0; /* Rond alleen de bovenste hoeken af */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 18px;
-    width: 600px; /* stel een vaste breedte in voor alle knoppen */
-    padding: 10px 20px;
-    font-weight: normal;
-}
-
-button.active {
     background-color: #F9FAFB;
     font-weight: bold;
+    width: 600px; /* stel een vaste breedte in voor alle knoppen */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px 5px 0 0; 
+    margin: 0;
 }
