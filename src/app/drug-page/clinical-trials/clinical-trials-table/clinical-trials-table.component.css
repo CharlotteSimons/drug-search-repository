@@ -1,0 +1,32 @@
+table {
+    width: 98%;
+    border-collapse: collapse; /* Verwijdert de ruimte tussen de 'vakjes' */
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 16px; /* Stel de tekstgrootte in op 16px */
+}
+
+thead th {
+    background-color: #00a56a; /* Groene achtergrond voor de header */
+    color: white; /* Witte tekst voor de header */
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+tbody td {
+    padding-left: 20px; 
+    color: black;
+    font-weight: normal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+  
+  tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Witte achtergrond voor oneven rijen */
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #fff; /* Net niet witte achtergrond voor even rijen */
+  }

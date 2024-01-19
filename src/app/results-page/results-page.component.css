@@ -1,0 +1,30 @@
+body {
+    min-height: 100vh;
+    background-color: #F9FAFB; /* Tailwind gray-50 */
+    color: #111827; /* Tailwind gray-900 */
+    margin: 0; /* Verwijder standaardmarge */
+    padding: 0;
+    width: 100%
+}
+
+.header-bar {
+    width: 100%;
+    background-color: #F9FAFB; /* Tailwind green-500 */
+    background-image: url('/assets/images/logo.png');
+    background-size: 200px; /* Zorg dat het logo volledig zichtbaar is */
+    background-position: 20px center; /* Positioneer het logo links en verticaal gecentreerd */
+    background-repeat: no-repeat; /* Voorkom dat het logo herhaalt */
+    color: white; /* Zorg voor voldoende contrast */
+    padding: 0.3rem; /* Aangepaste padding-waarden */
+    text-align: center;
+    height: 50px; /* Stel een vaste hoogte in */
+    display: flex; /* Gebruik flexbox voor uitlijning */
+    align-items: center; /* Centreer items verticaal */
+    justify-content: center; /* Centreer items horizontaal */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Voeg schaduw toe voor diepte */
+}
+
+.bold {
+    font-weight: bold;
+}
+

@@ -1,0 +1,17 @@
+.search-button {
+    text-align: center;
+    background-color: #00a56a;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    padding-top: 10px; /* Voeg dit toe voor de bovenkant */
+    padding-bottom: 10px; /* Voeg dit toe voor de onderkant */
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+  

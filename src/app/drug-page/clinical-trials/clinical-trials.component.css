@@ -1,0 +1,15 @@
+.clinical-trials {
+        color: #00a56a;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        padding-top: 2px; /* Voegt een kleine ruimte toe boven de tekst */
+        padding-bottom: 20px;
+        font-weight: bold; /* Maakt de tekst dikgedrukt */
+        font-size: 10px; /* Vergroot de tekstgrootte */
+        font-family: 'Arial', sans-serif; /* Stelt een professioneel lettertype in */
+        background-color: white;
+        width: 90%;           /* Zet de breedte op 80% */
+        margin-left: auto;    /* Centreert de div horizontaal */
+        margin-right: auto;   /* Centreert de div horizontaal */
+    }

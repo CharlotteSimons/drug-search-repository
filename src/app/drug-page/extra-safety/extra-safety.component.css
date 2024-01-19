@@ -1,0 +1,39 @@
+.safety-information {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    font-size: 10px;
+    background-color: white;
+    width: 90%;           /* Zet de breedte op 80% */
+    margin-left: auto;    /* Centreert de div horizontaal */
+    margin-right: auto;   /* Centreert de div horizontaal */
+    padding-top: 2px; /* Voegt een kleine ruimte toe boven de tekst */
+    padding-bottom: 2px; 
+}
+
+.safety-information h1 {
+    color: #00a56a;
+    font-weight: bold;
+}
+
+.safety-information h2, .safety-information p {
+    font-size: 16px; /* Stel de gewenste tekstgrootte in */
+    font-weight: normal; /* Standaard gewicht voor beide */
+    margin: 0; /* Verwijder standaard marges */
+    padding: 0; /* Verwijder standaard padding */
+}
+
+.safety-information h2 {
+    font-weight: bold; /* Alleen h2 dikgedrukt maken */
+}
+
+.safety-information .group {
+    display: flex;
+    flex-direction: column; /* Zet de flex items onder elkaar */
+    align-items: flex-start; /* Lijn items uit aan de start van de flex container */
+    margin-bottom: 10px;
+}
+
+.safety-information .group p {
+    font-weight: normal; /* Zorg ervoor dat p niet dikgedrukt is */
+}

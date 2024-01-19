@@ -1,0 +1,94 @@
+.search-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+  .search-box h4 {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  
+  .search-section:first-child {
+    margin-top: 30px; /* Verschuif de eerste zoeksectie naar beneden */
+  }
+    
+  .search-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+  }
+    
+  .search-box input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0;
+    border: 2px solid #E5E7EB;
+    border-radius: 0.1rem;
+    font-family: 'inter';
+    font-size: 15px; /* Stel de font-size in */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+    
+  .search-box input[type="text"]:focus {
+    outline: none;
+    border: 2px solid #00a56a; /* Maak de rand dunner */
+    box-shadow: none; 
+  }
+    
+  .shared-style {
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: calc(100% + 4px); /* Voeg de breedte van de randen toe aan de totale breedte */
+    max-width: calc(600px + 300px); /* Voeg de breedte van de randen toe aan de max-width */
+    padding-left: 2px; /* Voeg padding toe om de randbreedte te compenseren */
+    padding-right: 2px; /* Voeg padding toe om de randbreedte te compenseren */
+    box-sizing: content-box; /* De breedte en hoogte eigenschappen (width en height) bevatten alleen de inhoud en geen border of padding */
+    background-color: #F9FAFB;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0.1rem;
+    margin-top: 0.25rem;
+    border: 2px solid #E5E7EB;
+    border-top: none;
+    list-style-type: none;
+    font-family: 'inter';
+    z-index: 10;
+  }
+    
+  ul li {
+    padding: 0.5rem;
+    cursor: pointer;
+    font-family: 'inter';
+    font-size: 14px; /* Zorg dat de font-size overeenkomt met die van de input */
+  }
+    
+  ul li:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .search-button {
+    position: absolute; /* Behoud absolute positionering */
+    left: 50%; /* Positioneer de linkerkant van de button in het midden van de .search-box */
+    transform: translateX(-50%); /* Centreer de button horizontaal */
+    bottom: -40px; /* Pas de positie van de onderkant aan om de button onder de .search-box te plaatsen */
+    width: auto; /* Verwijder de breedte-instelling zodat de button zijn inhoudsbreedte gebruikt */
+    max-width: none; /* Verwijder de max-width-instelling */
+    margin-top: 0; /* Verwijder de margin-top */
+    display: block;
+    width: 20%;
+    padding: 0.75rem;
+    text-align: center;
+    background-color: #00a56a; 
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+  }
+  

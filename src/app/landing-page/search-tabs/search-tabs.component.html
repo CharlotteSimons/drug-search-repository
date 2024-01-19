@@ -1,0 +1,7 @@
+<div class="search-tabs-header">
+    Find treatment options for your patients
+    <div class="search-tabs-container">
+        <button [ngClass]="{'active': activeTab === 'drug'}" (click)="setActiveTab('drug')">Drug search</button>
+        <button [ngClass]="{'active': activeTab === 'patientInfo'}" (click)="setActiveTab('patientInfo')">Condition treatment search</button>
+    </div>
+</div>

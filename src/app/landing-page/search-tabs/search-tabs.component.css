@@ -1,0 +1,42 @@
+.search-tabs-header {
+    position: relative;
+    text-align: center;
+    padding: 20px 0 80px;
+    background-color: #00a56a;
+    color: #ffffff;
+    font-size: 22px;
+    border-bottom: 1px solid #B0BEC5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    
+}
+
+.search-tabs-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 0;
+    background-color: #00a56a;
+    color: black; /* Verandert de tekstkleur naar wit voor beter contrast */
+    border: none;
+    border-radius: 5px 5px 0 0; /* Rond alleen de bovenste hoeken af */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px;
+    width: 300px; /* stel een vaste breedte in voor alle knoppen */
+    padding: 10px 20px;
+    font-weight: normal;
+}
+
+button.active {
+    background-color: #F9FAFB;
+    font-weight: bold;
+}

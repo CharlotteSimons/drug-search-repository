@@ -1,0 +1,43 @@
+table {
+  width: 80%;
+  border-collapse: collapse; /* Verwijdert de ruimte tussen de 'vakjes' */
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em; /* Stel de standaard tekstgrootte van de tabel in */
+}
+
+thead th {
+  background-color: #00a56a; /* Groene achtergrond voor de header */
+  color: white; /* Witte tekst voor de header */
+  text-align: left;
+  padding: 15px;
+}
+
+tbody td {
+  padding: 15px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Witte achtergrond voor oneven rijen */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fff; /* Net niet witte achtergrond voor even rijen */
+}
+
+tbody tr td:first-child {
+  text-decoration: underline;
+}
+
+h1 {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  margin-top: 30px;
+  font-weight: normal; /* Zorgt ervoor dat de h1 tekst niet dikgedrukt is */
+}
+
+.results-count {
+  font-weight: bold; /* Maakt de tekst binnen de span dikgedrukt */
+}

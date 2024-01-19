@@ -1,0 +1,46 @@
+/* src/app/landing-page/drugs-bar/search-drug/side-panel-drugs/side-panel-drugs.component.css */
+.side-panel-drugs {
+    position: fixed; /* Paneel vast op het scherm */
+    top: 0; /* Aan de bovenkant van het scherm */
+    right: -100%; /* Start buiten het scherm */
+    width: 400px; /* Breedte van het paneel */
+    height: 100%; /* Volledige hoogte van het scherm */
+    background-color: #fff; /* Achtergrondkleur van het paneel */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Schaduw aan de linkerkant van het paneel */
+    overflow-y: auto; /* Zorgt ervoor dat de inhoud scrollbaar is als het te lang is */
+    transition: right 0.3s ease-in-out;/* Gladde transitie voor het paneel */
+    z-index: 1000; /* Zorgt ervoor dat het paneel boven andere elementen staat */
+  }
+  
+  .side-panel-drugs.show {
+    right: 0;
+  }
+
+  .panel-content{
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .panel-content h2 {
+    margin-top: 30px;
+    color: #00a56a; /* donkere tekstkleur voor de kop */
+    font-size: 1.5em; /* grootte van de kop */
+  }
+  
+  .panel-content p {
+    margin-top: 10px;
+    color: #666; /* lichtere tekstkleur voor de paragraaf */
+    line-height: 1.6; /* regelhoogte voor leesbaarheid */
+    text-align: justify; /* Zorgt voor uitlijning van de tekst */
+    text-justify: inter-word;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 24px; /* Pas de grootte naar wens aan */
+    cursor: pointer;
+  }

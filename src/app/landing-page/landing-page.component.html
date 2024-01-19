@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Tomorrows - Drug Search</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+</style>
+</head>
+<body>
+  <div class="container mx-auto px-4 py-8">
+    <header class="mb-6 header-bar">
+    </header>
+  </div>
+
+<app-search-tabs (tabChanged)="activeTab = $event"></app-search-tabs>
+<app-drugs-bar *ngIf="activeTab === 'drug'"></app-drugs-bar>
+<app-patient-bars *ngIf="activeTab === 'patientInfo'"></app-patient-bars>
+
+</body>
+</html>

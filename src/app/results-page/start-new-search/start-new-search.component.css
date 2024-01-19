@@ -1,0 +1,14 @@
+span {
+    cursor: pointer;
+    color: black; /* Een typische linkkleur */
+    text-decoration: underline; /* Onderstreep om het klikbaar te laten lijken */
+}
+
+.start-new-search-container {
+    width: 80%; /* Dezelfde breedte als uw tabel voor consistentie */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+

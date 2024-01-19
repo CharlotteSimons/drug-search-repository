@@ -1,0 +1,20 @@
+<div class="search-section">
+  <div class="search-box">
+    <div class="title-with-info">
+      <h4>Drug name</h4>
+      <app-info-button-drugs (infoClick)="handleInfoClick()"></app-info-button-drugs>
+    </div>
+    <input 
+      type="text" 
+      id="drug-name" 
+      placeholder="Type in drug name" 
+      [(ngModel)]="searchInput" 
+      (input)="onSearchChange($event)">
+    <ul *ngIf="searchInput && showSuggestions">
+      <li *ngFor="let drug of (filteredDrugs$ | async)" (click)="handleSelect(drug)" [innerHTML]="highlightSearchText(drug.main_drug)">
+      </li>
+    </ul>
+  </div>
+  <app-side-panel-drugs [show]="showSidePanelDrugs"></app-side-panel-drugs>
+</div>
+

@@ -1,0 +1,24 @@
+<h1><span class="results-count">{{ items.length }}</span> results for your search request</h1>
+
+<table>
+    <thead>
+      <tr>
+        <th>Intervention</th>
+        <th>Target</th>
+        <th>Phase</th>
+        <th>Efficacy</th>
+        <th>Safety</th>
+        <th>Clinical studies/EAP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items" (click)="redirectToDrugPage(item.veld1)">
+        <td>{{ item.veld1 }}</td>
+        <td>{{ item.veld2 }}</td>
+        <td>{{ item.veld3 }}</td>
+        <td>{{ item.veld4 }}</td>
+        <td>{{ item.veld5 }}</td>
+        <td>{{ item.veld6 }}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,15 @@
+span {
+    cursor: pointer;
+    color: black; /* Een typische linkkleur */
+    text-decoration: underline; /* Onderstreep om het klikbaar te laten lijken */
+}
+
+.back-to-previous-page-container {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 20px; /* Voeg padding toe om de tekst van de rand af te zetten */
+    margin-left: auto;    /* Centreert de div horizontaal */
+    margin-right: auto; 
+}
+

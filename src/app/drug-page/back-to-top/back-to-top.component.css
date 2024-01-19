@@ -1,0 +1,20 @@
+.back-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 18px;
+    cursor: pointer;
+    background-color: #F9FAFB; /* Achtergrondkleur van de knop */
+    border: 2px solid #00a56a; /* Groene omlijning */
+    border-radius: 50%; /* Maakt de knop volledig rond */
+    width: 40px; /* Vaste breedte */
+    height: 40px; /* Vaste hoogte, gelijk aan de breedte voor een perfecte cirkel */
+    display: flex; /* Gebruik flexbox voor uitlijning van de icoon */
+    align-items: center; /* Centreer de icoon verticaal */
+    justify-content: center; /* Centreer de icoon horizontaal */
+}
+
+/* Stijl voor het Font Awesome icoon */
+.back-to-top-button .icon .fas {
+    color: #10B981; /* Groene kleur voor de pijl */
+    font-size: 24px; /* Grootte van de pijl */
+}
