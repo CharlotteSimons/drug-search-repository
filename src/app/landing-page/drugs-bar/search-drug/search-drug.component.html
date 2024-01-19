@@ -7,7 +7,7 @@
     <input 
       type="text" 
       id="drug-name" 
-      placeholder="Type in drug name" 
+      placeholder="Type in drug" 
       [(ngModel)]="searchInput" 
       (input)="onSearchChange($event)">
     <ul *ngIf="searchInput && showSuggestions">
