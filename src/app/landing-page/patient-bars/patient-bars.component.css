@@ -1,8 +1,0 @@
-.example-card {
-    max-width: 600px; /* Maximale breedte van de kaart */
-    margin: auto; /* Centreert de kaart horizontaal en verticaal */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Voegt schaduw toe voor diepte */
-    padding: 10px; /* Ruimte binnenin de kaart */
-    display: flex; /* Maakt dit een flex container */
-    height: 40vh; /* Maakt de hoogte van de kaart gelijk aan de viewport */
-}

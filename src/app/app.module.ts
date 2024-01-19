@@ -10,9 +10,7 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SearchTabsComponent } from './landing-page/search-tabs/search-tabs.component';
 import { DrugsBarComponent } from './landing-page/drugs-bar/drugs-bar.component';
-import { PatientBarsComponent } from './landing-page/patient-bars/patient-bars.component';
 import { SearchButtonDrugsComponent } from './landing-page/drugs-bar/search-button-drugs/search-button-drugs.component';
-import { SearchButtonPatientComponent } from './landing-page/patient-bars/search-button-patient/search-button-patient.component';
 import { SearchMedicalConditionComponent } from './landing-page/drugs-bar/search-medical-condition/search-medical-condition.component';
 import { SearchDrugTargetComponent } from './landing-page/drugs-bar/search-drug-target/search-drug-target.component';
 import { SearchDrugComponent } from './landing-page/drugs-bar/search-drug/search-drug.component';
@@ -35,7 +33,7 @@ import { ExtraSafetyComponent } from './drug-page/extra-safety/extra-safety.comp
 import { PharmacokineticsComponent } from './drug-page/pharmacokinetics/pharmacokinetics.component';
 import { MahComponent } from './drug-page/mah/mah.component';
 import { InfoButtonDrugTargetComponent } from './landing-page/drugs-bar/search-drug-target/info-button-drug-target/info-button-drug-target.component';
-import { SidePanelDrugTargetComponent } from './landing-page/patient-bars/search-drug-target/side-panel-drug-target/side-panel-drug-target.component';
+import { SidePanelDrugTargetComponent } from './landing-page/drugs-bar/search-drug-target/side-panel-drug-target/side-panel-drug-target.component';
 import { SidePanelMedicalConditionComponent } from './landing-page/drugs-bar/search-medical-condition/side-panel-medical-condition/side-panel-medical-condition.component';
 import { InfoButtonMedicalConditionComponent } from './landing-page/drugs-bar/search-medical-condition/info-button-medical-condition/info-button-medical-condition.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -47,9 +45,7 @@ import { BackToTopComponent } from './drug-page/back-to-top/back-to-top.componen
     LandingPageComponent,
     SearchTabsComponent,
     DrugsBarComponent,
-    PatientBarsComponent,
     SearchButtonDrugsComponent,
-    SearchButtonPatientComponent,
     SearchMedicalConditionComponent,
     SearchDrugTargetComponent,
     SearchDrugComponent,
