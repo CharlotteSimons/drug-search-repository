@@ -3,7 +3,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-search-tabs',
   templateUrl: './search-tabs.component.html',
-  styleUrls: ['./search-tabs.component.css']
+  styleUrls: [
+    './search-tabs.component.css',
+]
 })
 export class SearchTabsComponent {
   @Output() tabChanged = new EventEmitter<string>();
