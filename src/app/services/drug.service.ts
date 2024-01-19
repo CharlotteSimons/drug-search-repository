@@ -1,38 +1,23 @@
-// aanroepen van data files in assets
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
-interface Drug {
-  main_drug: string;
-  // Voeg andere relevante properties toe
-}
-
-interface Gene {
-  gene_name: string;
-  // Voeg andere relevante properties toe
-}
-
-interface DrugTarget {
-  target_name: string;
-  // Voeg andere relevante properties toe
-}
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DrugsService {
-  constructor(private http: HttpClient) { }
+export class SearchInputService {
+  private searchTermSource = new BehaviorSubject<string>('');
+  private drugTargetTermSource = new BehaviorSubject<string>('');
 
-  getDrugs(): Observable<Drug[]> {
-    return this.http.get<Drug[]>('assets/unapproved.json');
+  currentSearchTerm = this.searchTermSource.asObservable();
+  currentDrugTargetTerm = this.drugTargetTermSource.asObservable();
+
+  constructor() { }
+
+  changeSearchTerm(term: string) {
+    this.searchTermSource.next(term);
   }
 
-  getGenes(): Observable<Gene[]> {
-    return this.http.get<Gene[]>('assets/Gene.json');
-  }
-
-  getDrugTargets(): Observable<DrugTarget[]> {
-    return this.http.get<DrugTarget[]>('assets/drug_targets.json');
+  changeDrugTargetTerm(term: string) {
+    this.drugTargetTermSource.next(term);
   }
 }
