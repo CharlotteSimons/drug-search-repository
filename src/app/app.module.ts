@@ -21,7 +21,6 @@ import { StartNewSearchComponent } from './results-page/start-new-search/start-n
 import { ResultsTableComponent } from './results-page/results-table/results-table.component';
 import { DrugPageComponent } from './drug-page/drug-page.component';
 import { BackToPreviousPageComponent } from './drug-page/back-to-previous-page/back-to-previous-page.component';
-import { DrugTitleComponent } from './drug-page/drug-title/drug-title.component';
 import { SubstanceInformationComponent } from './drug-page/substance-information/substance-information.component';
 import { ClinicalTrialsComponent } from './drug-page/clinical-trials/clinical-trials.component';
 import { ClinicalTrialsTableComponent } from './drug-page/clinical-trials/clinical-trials-table/clinical-trials-table.component';
@@ -56,7 +55,6 @@ import { BackToTopComponent } from './drug-page/back-to-top/back-to-top.componen
     ResultsTableComponent,
     DrugPageComponent,
     BackToPreviousPageComponent,
-    DrugTitleComponent,
     SubstanceInformationComponent,
     ClinicalTrialsComponent,
     ClinicalTrialsTableComponent,
