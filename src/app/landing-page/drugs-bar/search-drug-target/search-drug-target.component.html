@@ -1,0 +1,20 @@
+<div class="search-section">
+    <div class="search-box">
+    <div class="title-with-info">
+        <h4>Drug target</h4>
+        <app-info-button-drug-target (infoClick)="handleInfoClick()"></app-info-button-drug-target>
+    </div>
+      <input 
+        type="text" 
+        id="drug-target" 
+        placeholder="Type in drug target"
+        [(ngModel)]="searchInput" 
+        (input)="onSearchChange($event)">
+      <ul *ngIf="searchInput && showSuggestions">
+        <li *ngFor="let target of (filteredTargets$ | async)" (click)="handleSelect(target)">
+          {{ target.target_name }} 
+        </li>
+      </ul>
+    </div>
+    <app-side-panel-drug-target [show]="showSidePanelDrugs"></app-side-panel-drug-target>
+  </div>
