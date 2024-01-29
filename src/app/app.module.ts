@@ -37,6 +37,7 @@ import { SidePanelMedicalConditionComponent } from './landing-page/drugs-bar/sea
 import { InfoButtonMedicalConditionComponent } from './landing-page/drugs-bar/search-medical-condition/info-button-medical-condition/info-button-medical-condition.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BackToTopComponent } from './drug-page/back-to-top/back-to-top.component';
+import { SearchButtonMedicalComponent } from './landing-page/drugs-bar/search-button-medical/search-button-medical.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { BackToTopComponent } from './drug-page/back-to-top/back-to-top.componen
     SidePanelMedicalConditionComponent,
     InfoButtonMedicalConditionComponent,
     BackToTopComponent,
+    SearchButtonMedicalComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
