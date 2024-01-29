@@ -38,6 +38,7 @@ import { InfoButtonMedicalConditionComponent } from './landing-page/drugs-bar/se
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BackToTopComponent } from './drug-page/back-to-top/back-to-top.component';
 import { SearchButtonMedicalComponent } from './landing-page/drugs-bar/search-button-medical/search-button-medical.component';
+import { DividerComponent } from './landing-page/drugs-bar/divider/divider.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { SearchButtonMedicalComponent } from './landing-page/drugs-bar/search-bu
     InfoButtonMedicalConditionComponent,
     BackToTopComponent,
     SearchButtonMedicalComponent,
+    DividerComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
