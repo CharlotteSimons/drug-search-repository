@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Observable, of, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap, catchError } from 'rxjs/operators';
 import { DrugsService } from '../../../services/drug.service';
+import { SearchInputService } from '../../../services/search-input.service';
 
 interface DrugResponse {
   main_drug: string;
@@ -27,7 +28,10 @@ export class SearchDrugComponent implements OnInit {
 
   @Output() validSearch = new EventEmitter<boolean>(); // Voeg deze regel toe
 
-  constructor(private drugsService: DrugsService) {}
+  constructor(
+    private drugsService: DrugsService,
+    private searchInputService: SearchInputService // Injecteer de SearchInputService
+  ) {}
 
   ngOnInit() {
     this.searchTerms.pipe(
@@ -73,7 +77,8 @@ export class SearchDrugComponent implements OnInit {
     this.searchInput = drug.main_drug;
     this.valid = true;
     this.showSuggestions = false;
-    this.validSearch.emit(this.valid); // Voeg deze regel toe
+    this.validSearch.emit(this.valid);
+    this.searchInputService.changeSearchTerm(drug.main_drug); // Update de zoekterm in de service
   }
 
   handleInfoClick(): void {
