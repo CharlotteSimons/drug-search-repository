@@ -43,3 +43,8 @@ h1 .search-term,
 h1 .drug-target-term {
   font-weight: bold;
 }
+
+.interventionColumn{
+  display: flex;
+  flex-direction: column;
+}

@@ -39,6 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BackToTopComponent } from './drug-page/back-to-top/back-to-top.component';
 import { SearchButtonMedicalComponent } from './landing-page/drugs-bar/search-button-medical/search-button-medical.component';
 import { DividerComponent } from './landing-page/drugs-bar/divider/divider.component';
+import { CapitalizeFirstPipe } from './capitalize-first.pipe';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { DividerComponent } from './landing-page/drugs-bar/divider/divider.compo
     BackToTopComponent,
     SearchButtonMedicalComponent,
     DividerComponent,
+    CapitalizeFirstPipe,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
