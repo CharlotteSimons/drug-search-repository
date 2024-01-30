@@ -15,8 +15,12 @@ export class DrugsByIndicationService {
     if (!searchTerm.trim()) {
       return [];
     }
-    return (drugsByIndication as DrugByIndication[])
-      .filter(item => item.disease && item.disease.toLowerCase().includes(searchTerm.toLowerCase()))
-      .map(item => item.disease);
+    const uniqueDiseases = new Set<string>(
+      drugsByIndication
+        .filter(item => item.disease && item.disease.toLowerCase().includes(searchTerm.toLowerCase()))
+        .map(item => item.disease)
+        .filter((disease): disease is string => !!disease) // Verwijder undefined waarden
+    );
+    return Array.from(uniqueDiseases);
   }
 }
