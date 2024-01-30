@@ -5,6 +5,9 @@
         <app-info-button-medical-condition (infoClick)="handleInfoClick()"></app-info-button-medical-condition>
     </div>
     <input type="text" id="Medical condition" placeholder="Type in medical condition" (input)="onSearchTermChange($event)">
+    <ul *ngIf="filteredDiseases.length > 0">
+      <li *ngFor="let disease of filteredDiseases">{{ disease }}</li>
+    </ul>
     </div>
     <app-side-panel-medical-condition [show]="showSidePanelMedicalCondition"></app-side-panel-medical-condition>
   </div>

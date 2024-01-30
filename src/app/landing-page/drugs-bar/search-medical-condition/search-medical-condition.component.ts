@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SearchInputService } from '../../../services/search-input.service'; // Pas dit pad aan indien nodig
+import { DrugsByIndicationService } from '../../../services/drugsbyindication.service';
 
 @Component({
   selector: 'app-search-medical-condition',
@@ -13,8 +14,17 @@ export class SearchMedicalConditionComponent {
   valid: boolean = true;
   showSuggestions: boolean = true;
   showSidePanelMedicalCondition: boolean = false;
+  filteredDiseases: string[] = [];
 
-  constructor(private searchInputService: SearchInputService) {}
+  constructor(
+    private searchInputService: SearchInputService,
+    private drugsByIndicationService: DrugsByIndicationService
+    ) {}
+
+    ngOnInit(): void {
+      // Optioneel: Laad alle ziektes wanneer het component wordt geïnitialiseerd
+      this.filteredDiseases = this.drugsByIndicationService.getDiseases();
+    }
 
   handleInfoClick(): void {
     this.showSidePanelMedicalCondition = !this.showSidePanelMedicalCondition;
@@ -22,8 +32,8 @@ export class SearchMedicalConditionComponent {
 
   onSearchTermChange(event: Event): void {
     const inputElement = event.target as HTMLInputElement;
-    if (inputElement && inputElement.value) {
-      this.searchInputService.changeSearchTerm(inputElement.value);
+    if (inputElement) {
+      this.filteredDiseases = this.drugsByIndicationService.getDiseases(inputElement.value);
     }
   }
 }
