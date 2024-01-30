@@ -40,6 +40,7 @@ import { BackToTopComponent } from './drug-page/back-to-top/back-to-top.componen
 import { SearchButtonMedicalComponent } from './landing-page/drugs-bar/search-button-medical/search-button-medical.component';
 import { DividerComponent } from './landing-page/drugs-bar/divider/divider.component';
 import { CapitalizeFirstPipe } from './capitalize-first.pipe';
+import { SimilarDrugsComponent } from './drug-page/similar-drugs/similar-drugs.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { CapitalizeFirstPipe } from './capitalize-first.pipe';
     SearchButtonMedicalComponent,
     DividerComponent,
     CapitalizeFirstPipe,
+    SimilarDrugsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

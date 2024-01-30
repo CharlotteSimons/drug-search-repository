@@ -30,3 +30,7 @@ tbody td {
   tbody tr:nth-child(even) {
     background-color: #fff; /* Net niet witte achtergrond voor even rijen */
   }
+
+  .title {
+    text-decoration: underline;
+  }
