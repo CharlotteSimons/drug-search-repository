@@ -8,11 +8,6 @@ interface Drug {
   // Voeg andere relevante properties toe
 }
 
-interface Gene {
-  gene_name: string;
-  // Voeg andere relevante properties toe
-}
-
 interface DrugTarget {
   target_name: string;
   // Voeg andere relevante properties toe
@@ -26,10 +21,6 @@ export class DrugsService {
 
   getDrugs(): Observable<Drug[]> {
     return this.http.get<Drug[]>('assets/unapproved.json');
-  }
-
-  getGenes(): Observable<Gene[]> {
-    return this.http.get<Gene[]>('assets/Gene.json');
   }
 
   getDrugTargets(): Observable<DrugTarget[]> {
