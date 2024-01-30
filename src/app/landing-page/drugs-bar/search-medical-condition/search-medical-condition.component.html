@@ -4,9 +4,18 @@
         <h4>Medical condition</h4>
         <app-info-button-medical-condition (infoClick)="handleInfoClick()"></app-info-button-medical-condition>
     </div>
-    <input type="text" id="Medical condition" placeholder="Type in medical condition" (input)="onSearchTermChange($event)">
-    <ul *ngIf="filteredDiseases.length > 0">
-      <li *ngFor="let disease of filteredDiseases">{{ disease }}</li>
+    <input 
+    autocomplete="off" 
+    type="text" 
+    id="Medical condition" 
+    placeholder="Type in medical condition" 
+    [(ngModel)]="searchTerm"
+    (input)="onSearchTermChange($event)">
+    <ul *ngIf="showSuggestions">
+      <li *ngFor="let disease of filteredDiseases" 
+      (click)="onDiseaseSelect(disease)"
+      [innerHTML]="highlightMatch(disease)">
+      </li>
     </ul>
     </div>
     <app-side-panel-medical-condition [show]="showSidePanelMedicalCondition"></app-side-panel-medical-condition>
