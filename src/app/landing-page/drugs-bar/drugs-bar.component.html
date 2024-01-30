@@ -1,8 +1,11 @@
 <mat-card class="example-card">
   <div class="drug-bar search-section">
-    <app-search-drug class="shared-style"></app-search-drug>
+    <app-search-drug class="shared-style" (validSearch)="searchValid=$event"></app-search-drug>
+    <app-search-button-drugs class="shared-style" [isValidSearch]="searchValid"></app-search-button-drugs>
+    <app-divider></app-divider>
     <app-search-drug-target class="shared-style"></app-search-drug-target>
     <app-search-medical-condition class="shared-style"></app-search-medical-condition>
-    <app-search-button-drugs class="shared-style"></app-search-button-drugs>
+    <app-search-button-medical class="shared-style"></app-search-button-medical>
   </div>
 </mat-card>
+

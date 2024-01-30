@@ -21,7 +21,6 @@ import { StartNewSearchComponent } from './results-page/start-new-search/start-n
 import { ResultsTableComponent } from './results-page/results-table/results-table.component';
 import { DrugPageComponent } from './drug-page/drug-page.component';
 import { BackToPreviousPageComponent } from './drug-page/back-to-previous-page/back-to-previous-page.component';
-import { DrugTitleComponent } from './drug-page/drug-title/drug-title.component';
 import { SubstanceInformationComponent } from './drug-page/substance-information/substance-information.component';
 import { ClinicalTrialsComponent } from './drug-page/clinical-trials/clinical-trials.component';
 import { ClinicalTrialsTableComponent } from './drug-page/clinical-trials/clinical-trials-table/clinical-trials-table.component';
@@ -38,6 +37,10 @@ import { SidePanelMedicalConditionComponent } from './landing-page/drugs-bar/sea
 import { InfoButtonMedicalConditionComponent } from './landing-page/drugs-bar/search-medical-condition/info-button-medical-condition/info-button-medical-condition.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BackToTopComponent } from './drug-page/back-to-top/back-to-top.component';
+import { SearchButtonMedicalComponent } from './landing-page/drugs-bar/search-button-medical/search-button-medical.component';
+import { DividerComponent } from './landing-page/drugs-bar/divider/divider.component';
+import { CapitalizeFirstPipe } from './capitalize-first.pipe';
+import { SimilarDrugsComponent } from './drug-page/similar-drugs/similar-drugs.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,6 @@ import { BackToTopComponent } from './drug-page/back-to-top/back-to-top.componen
     ResultsTableComponent,
     DrugPageComponent,
     BackToPreviousPageComponent,
-    DrugTitleComponent,
     SubstanceInformationComponent,
     ClinicalTrialsComponent,
     ClinicalTrialsTableComponent,
@@ -72,6 +74,10 @@ import { BackToTopComponent } from './drug-page/back-to-top/back-to-top.componen
     SidePanelMedicalConditionComponent,
     InfoButtonMedicalConditionComponent,
     BackToTopComponent,
+    SearchButtonMedicalComponent,
+    DividerComponent,
+    CapitalizeFirstPipe,
+    SimilarDrugsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

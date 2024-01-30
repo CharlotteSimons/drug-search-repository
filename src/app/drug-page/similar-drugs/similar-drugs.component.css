@@ -1,7 +1,8 @@
-.substance-information {
+.alternative {
     margin-top: 10px;
     margin-bottom: 20px;
     padding-left: 20px;
+    font-size: 10px;
     background-color: white;
     width: 90%;           /* Zet de breedte op 80% */
     margin-left: auto;    /* Centreert de div horizontaal */
@@ -10,30 +11,29 @@
     padding-bottom: 2px; 
 }
 
-.substance-information h1 {
+.alternative  h1 {
     color: #00a56a;
     font-weight: bold;
-    font-size: 24px;
 }
 
-.substance-information h2, .substance-information p {
+.alternative h2, .alternative p {
     font-size: 16px; /* Stel de gewenste tekstgrootte in */
     font-weight: normal; /* Standaard gewicht voor beide */
     margin: 0; /* Verwijder standaard marges */
     padding: 0; /* Verwijder standaard padding */
 }
 
-.substance-information h2 {
+.alternative h2 {
     font-weight: bold; /* Alleen h2 dikgedrukt maken */
 }
 
-.substance-information .group {
+.alternative .group {
     display: flex;
     flex-direction: column; /* Zet de flex items onder elkaar */
     align-items: flex-start; /* Lijn items uit aan de start van de flex container */
     margin-bottom: 10px;
 }
 
-.substance-information .group p {
+.alternative .group p {
     font-weight: normal; /* Zorg ervoor dat p niet dikgedrukt is */
 }

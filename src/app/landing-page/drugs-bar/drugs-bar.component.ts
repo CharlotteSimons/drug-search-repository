@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './drugs-bar.component.css'
 })
 export class DrugsBarComponent {
-
+  searchValid: boolean = false; // Voeg deze property toe om de zoekgeldigheid bij te houden
 }

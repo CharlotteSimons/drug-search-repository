@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DrugTitleComponent } from './drug-title.component';
+import { SimilarDrugsComponent } from './similar-drugs.component';
 
-describe('DrugTitleComponent', () => {
-  let component: DrugTitleComponent;
-  let fixture: ComponentFixture<DrugTitleComponent>;
+describe('SimilarDrugsComponent', () => {
+  let component: SimilarDrugsComponent;
+  let fixture: ComponentFixture<SimilarDrugsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DrugTitleComponent]
+      declarations: [SimilarDrugsComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(DrugTitleComponent);
+    fixture = TestBed.createComponent(SimilarDrugsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

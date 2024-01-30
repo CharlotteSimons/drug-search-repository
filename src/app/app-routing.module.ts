@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'results', component: ResultsPageComponent },
   { path: 'drugpage', component: DrugPageComponent },
-  { path: 'drugpage/:drugName', component: DrugPageComponent },
+  { path:'drugpage/:drugName' , component: DrugPageComponent },
 ];
 
 @NgModule({

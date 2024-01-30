@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SearchInputService } from '../../services/search-input.service';
 
 @Component({
   selector: 'app-substance-information',
   templateUrl: './substance-information.component.html',
-  styleUrl: './substance-information.component.css'
+  styleUrls: ['./substance-information.component.css']
 })
-export class SubstanceInformationComponent {
+export class SubstanceInformationComponent implements OnInit {
+  drugName: string = '';
 
+  constructor(private searchInputService: SearchInputService) {}
+
+  ngOnInit() {
+    this.searchInputService.currentSearchTerm.subscribe(name => {
+      this.drugName = name;
+    });
+  }
 }

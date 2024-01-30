@@ -2,4 +2,5 @@
     display: flex; /* Maakt dit een flex container */
     align-items: center; /* Centreert de items verticaal */
     gap: 10px; /* Voegt ruimte toe tussen de h4 en de knop */
+    margin-top: 40px;
   }
