@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common'; // Importeer Location
 
 @Component({
   selector: 'app-back-to-previous-page',
   templateUrl: './back-to-previous-page.component.html',
-  styleUrl: './back-to-previous-page.component.css'
+  styleUrls: ['./back-to-previous-page.component.css'] // Correct de typo in 'styleUrls'
 })
 export class BackToPreviousPageComponent {
-  constructor(private router: Router) {} // Injecteer de Router in de constructor
+  constructor(private location: Location) {} // Injecteer de Location in de constructor
 
-  navigateHome() {
-    this.router.navigate(['/']); // Navigeer naar de root route (landing-page)
+  navigateBack() {
+    this.location.back(); // Gebruik de back functie van Location om terug te gaan
   }
 }
-
 
