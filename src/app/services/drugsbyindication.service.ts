@@ -23,4 +23,14 @@ export class DrugsByIndicationService {
     );
     return Array.from(uniqueDiseases);
   }
+
+  getDrugsByDisease(disease: string): DrugByIndication[] {
+    return drugsByIndication
+      .filter((drug): drug is DrugByIndication => drug.disease === disease && typeof drug.disease === 'string')
+      .map(drug => ({
+        trial_id: drug.trial_id,
+        unapproved: drug.unapproved,
+        disease: drug.disease
+      }));
+  }
 }
