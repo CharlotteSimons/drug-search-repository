@@ -14,7 +14,7 @@ import { Subscription } from 'rxjs';
 })
 export class SearchMedicalConditionComponent implements OnInit, OnDestroy {
   valid: boolean = true;
-  showSuggestions: boolean = true;
+  showSuggestions: boolean = false; 
   showSidePanelMedicalCondition: boolean = false;
   filteredDiseases: string[] = [];
   searchInput: string = '';
