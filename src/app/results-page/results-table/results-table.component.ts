@@ -38,12 +38,17 @@ export class ResultsTableComponent implements OnInit {
     );
   }
 
+  capitalizeFirstLetter(value: string): string {
+    if (!value) return value;
+    return value.charAt(0).toUpperCase() + value.slice(1);
+  }
+
   updateItems() {
     if (this.searchTerm) {
       this.subscriptions.add(
         this.drugsByIndicationService.getDrugsByDisease(this.searchTerm).subscribe(drugs => {
           this.items = drugs.map(drug => ({
-            veld1: drug.unapproved,
+            veld1: this.capitalizeFirstLetter(drug.unapproved),
             veld2: 'PD-1 receptor, EGFR-mutation',
             veld3: 'Phase 1',
             veld4: '40 patients were enrolled with an overall ORR of 50.0% and disease-control rate (DCR) of 87.5%. The median progression free survival (PFS) and overall survival were 7.0 and 23.5 months, respectively.', 
