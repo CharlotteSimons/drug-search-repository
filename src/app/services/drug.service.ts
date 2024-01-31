@@ -1,14 +1,14 @@
-// aanroepen van data files in assets
+// src/app/services/drug.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-interface Drug {
+export interface Drug {
   main_drug: string;
-  // Voeg andere relevante properties toe
+  [key: string]: string; // Dit vangt alle andere properties op zoals '0', '1', etc.
 }
 
-interface DrugTarget {
+export interface DrugTarget {
   target_name: string;
   // Voeg andere relevante properties toe
 }
