@@ -1,5 +1,5 @@
 body {
-    min-height: 100vh;
+    height: 100%;
     background-color: #F9FAFB; /* Tailwind gray-50 */
     color: #111827; /* Tailwind gray-900 */
     margin: 0; /* Verwijder standaardmarge */
