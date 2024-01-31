@@ -30,9 +30,12 @@ export class ResultsTableComponent implements OnInit {
         this.updateItems();
       })
     );
-    this.searchInputService.currentDrugTargetTerm.subscribe(term => { // Voeg deze regel toe
-      this.drugTargetTerm = term; // En deze regel
-    });
+    this.subscriptions.add( // Zorg ervoor dat je deze subscription ook toevoegt
+      this.searchInputService.currentDrugTargetTerm.subscribe(term => {
+        this.drugTargetTerm = term;
+        this.updateItems(); // Zorg ervoor dat de items worden bijgewerkt wanneer de drugTargetTerm verandert
+      })
+    );
   }
 
   updateItems() {
@@ -60,7 +63,6 @@ export class ResultsTableComponent implements OnInit {
 
 
   redirectToDrugPage(drugName: string) {
-    this.searchInputService.changeSearchTerm(drugName); // Voeg deze regel toe
     this.router.navigate(['/drugpage', drugName]);
   }
 }

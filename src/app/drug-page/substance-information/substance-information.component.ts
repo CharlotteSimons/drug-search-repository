@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchInputService } from '../../services/search-input.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-substance-information',
@@ -9,11 +9,11 @@ import { SearchInputService } from '../../services/search-input.service';
 export class SubstanceInformationComponent implements OnInit {
   drugName: string = '';
 
-  constructor(private searchInputService: SearchInputService) {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.searchInputService.currentSearchTerm.subscribe(name => {
-      this.drugName = name;
+    this.route.params.subscribe(params => {
+      this.drugName = params['drugName'];
     });
   }
 }
