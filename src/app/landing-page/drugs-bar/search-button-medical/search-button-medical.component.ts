@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-search-button-medical',
@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 ]
 })
 export class SearchButtonMedicalComponent {
-
+  @Input() isSearchEnabled: boolean = false;
 }

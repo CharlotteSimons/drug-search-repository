@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Observable, Subject, of } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap, catchError } from 'rxjs/operators';
 import { DrugsService } from '../../../services/drug.service';
@@ -25,6 +25,8 @@ export class SearchDrugTargetComponent implements OnInit {
   showSidePanelDrugs: boolean = false;
   private searchTerms = new Subject<string>();
 
+  @Output() searchInputChange = new EventEmitter<string>(); // Voeg dit toe
+
   constructor(
     private drugsService: DrugsService,
     private searchInputService: SearchInputService // Injecteer de service
@@ -49,11 +51,14 @@ export class SearchDrugTargetComponent implements OnInit {
     this.searchInput = target.value;
     this.searchTerms.next(target.value);
     this.showSuggestions = !!target.value;
+    this.searchInputChange.emit(this.searchInput); // Stuur het event uit wanneer de zoekterm verandert
     this.searchInputService.changeDrugTargetTerm(target.value); // Update de zoekterm in de service
   }
 
   fetchSuggestions(query: string): Observable<DrugTarget[]> {
     if (!query.trim()) {
+      // Als de query leeg is, stuur dan een lege lijst en stop de suggesties
+      this.searchInputChange.emit(''); // Stuur een leeg event uit om de knop uit te schakelen
       return of([]);
     }
     return this.drugsService.getDrugTargets().pipe(
@@ -63,6 +68,7 @@ export class SearchDrugTargetComponent implements OnInit {
       }),
       catchError(error => {
         console.error('Er is iets misgegaan bij het ophalen van de suggesties:', error);
+        this.searchInputChange.emit(''); // Stuur een leeg event uit bij een fout
         return of([]); // Zorg ervoor dat je een lege array teruggeeft om de Observable keten niet te onderbreken
       })
     );
@@ -71,6 +77,7 @@ export class SearchDrugTargetComponent implements OnInit {
   handleSelect(target: DrugTarget): void {
     this.searchInput = target.target_name;
     this.showSuggestions = false;
+    this.searchInputChange.emit(this.searchInput); // Stuur het event uit wanneer een doelwit geselecteerd is
     this.searchInputService.changeDrugTargetTerm(target.target_name); // Update de zoekterm in de service
   }
 

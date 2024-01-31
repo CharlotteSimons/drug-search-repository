@@ -3,9 +3,9 @@
     <app-search-drug class="shared-style" (validSearch)="searchValid=$event"></app-search-drug>
     <app-search-button-drugs class="shared-style" [isValidSearch]="searchValid"></app-search-button-drugs>
     <app-divider></app-divider>
-    <app-search-drug-target class="shared-style"></app-search-drug-target>
-    <app-search-medical-condition class="shared-style"></app-search-medical-condition>
-    <app-search-button-medical class="shared-style"></app-search-button-medical>
+    <app-search-drug-target (searchInputChange)="onSearchDrugInputChange($event)"></app-search-drug-target>
+    <app-search-medical-condition class="shared-style" (searchTermChange)="onSearchMedicalInputChange($event)"></app-search-medical-condition>
+    <app-search-button-medical class="shared-style" [isSearchEnabled]="searchValid"></app-search-button-medical>
   </div>
 </mat-card>
 

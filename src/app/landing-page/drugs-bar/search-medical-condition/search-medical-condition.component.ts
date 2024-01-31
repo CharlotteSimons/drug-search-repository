@@ -1,7 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { SearchInputService } from '../../../services/search-input.service';
 import { DrugsByIndicationService } from '../../../services/drugsbyindication.service';
-import { map } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -21,6 +20,8 @@ export class SearchMedicalConditionComponent implements OnInit, OnDestroy {
   searchTerm: string = '';
   private subscriptions = new Subscription();
 
+  @Output() searchTermChange = new EventEmitter<string>(); // Voeg dit toe
+
   constructor(
     private searchInputService: SearchInputService,
     private drugsByIndicationService: DrugsByIndicationService
@@ -38,14 +39,14 @@ export class SearchMedicalConditionComponent implements OnInit, OnDestroy {
     this.showSidePanelMedicalCondition = !this.showSidePanelMedicalCondition;
   }
 
-
   onSearchTermChange(event: Event): void {
     const inputElement = event.target as HTMLInputElement;
     if (inputElement) {
       this.searchTerm = inputElement.value;
-      this.showSuggestions = true;
+      this.showSuggestions = this.searchTerm.length > 0;
+      this.searchTermChange.emit(this.searchTerm); // Stuur het event uit wanneer de zoekterm verandert
+
       if (this.searchTerm.length > 0) {
-        // Abonneer op de getDiseases methode met de searchTerm en wijs het resultaat toe aan filteredDiseases
         this.subscriptions.add(
           this.drugsByIndicationService.getDiseases(this.searchTerm).subscribe(diseases => {
             this.filteredDiseases = diseases;
@@ -58,7 +59,6 @@ export class SearchMedicalConditionComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    // Zorg ervoor dat alle subscriptions worden opgezegd wanneer de component wordt vernietigd
     this.subscriptions.unsubscribe();
   }
 
