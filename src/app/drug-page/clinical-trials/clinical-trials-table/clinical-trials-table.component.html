@@ -6,6 +6,7 @@
         <th>Status</th>
         <th>Title</th>
         <th>Intervention</th>
+        <th>Inclusion / exclusion criteria</th>
       </tr>
     </thead>
     <tbody>
@@ -15,6 +16,23 @@
         <td>{{ item.veld3 }}</td>
         <td class="title">{{ item.veld4 }}</td>
         <td>{{ item.veld5 }}</td>
+        <td>
+          <button (click)="toggleDetails(item)">
+            <span *ngIf="!item.showDetails">&#9660;</span> <!-- Pijl omlaag wanneer details verborgen zijn -->
+            <span *ngIf="item.showDetails">&#9650;</span> <!-- Pijl omhoog wanneer details zichtbaar zijn -->
+            {{ item.showDetails ? '' : item.veld6 }}
+          </button>
+          <div *ngIf="item.showDetails">
+            <strong>Inclusion criteria:</strong>
+            <ul>
+              <li *ngFor="let inc of item.criteria.inclusion">{{ inc }}</li>
+            </ul>
+            <strong>Exclusion criteria:</strong>
+            <ul>
+              <li *ngFor="let exc of item.criteria.exclusion">{{ exc }}</li>
+            </ul>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -78,7 +78,7 @@ export class SearchDrugComponent implements OnInit {
     this.valid = true;
     this.showSuggestions = false;
     this.validSearch.emit(this.valid);
-    this.searchInputService.changeSearchTerm(drug.main_drug); // Update de zoekterm in de service
+    this.searchInputService.changeSearchTerm(drug.main_drug);  // Update de zoekterm in de service
   }
 
   handleInfoClick(): void {

@@ -16,11 +16,9 @@ thead th {
 }
 
 tbody td {
-    padding-left: 20px; 
+    padding: 10px 20px 10px; 
     color: black;
     font-weight: normal;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
   
   tbody tr:nth-child(odd) {
@@ -34,3 +32,17 @@ tbody td {
   .title {
     text-decoration: underline;
   }
+
+  button {
+    border: none; /* Verwijdert de omlijning */
+    background: none; /* Maakt de achtergrond transparant */
+    padding: 0; /* Verwijdert padding */
+    font-size: inherit; /* De lettergrootte wordt overgenomen van de parent */
+    font-family: inherit;
+    cursor: pointer; /* Verandert de cursor in een handje om klikbaarheid aan te duiden */
+  }
+  
+  button:focus {
+    outline: none; /* Verwijdert de focus omlijning die browsers standaard toevoegen */
+  }
+

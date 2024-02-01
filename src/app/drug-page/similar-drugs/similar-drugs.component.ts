@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-similar-drugs',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './similar-drugs.component.css'
 })
 export class SimilarDrugsComponent {
+  private router = inject(Router)
 
+  navigateToDrugName(path: string){
+    this.router.navigate([path])
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
 }

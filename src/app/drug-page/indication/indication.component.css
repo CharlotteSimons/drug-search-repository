@@ -2,7 +2,6 @@
     margin-top: 10px;
     margin-bottom: 20px;
     padding-left: 20px;
-    font-size: 10px;
     background-color: white;
     width: 90%;           /* Zet de breedte op 80% */
     margin-left: auto;    /* Centreert de div horizontaal */
@@ -36,4 +35,7 @@
 
 .indication  .group p {
     font-weight: normal; /* Zorg ervoor dat p niet dikgedrukt is */
+}
+.indication ul{
+    padding-left: 20px;
 }

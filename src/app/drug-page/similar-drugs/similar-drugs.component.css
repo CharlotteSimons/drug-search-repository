@@ -34,6 +34,13 @@
     margin-bottom: 10px;
 }
 
-.alternative .group p {
+.group p {
     font-weight: normal; /* Zorg ervoor dat p niet dikgedrukt is */
+}
+
+.group{
+    cursor: pointer;
+}
+.group p:hover{
+    font-weight: bold;
 }
